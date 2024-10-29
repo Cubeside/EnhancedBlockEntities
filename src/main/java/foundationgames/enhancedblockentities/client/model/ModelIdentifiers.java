@@ -119,12 +119,12 @@ public final class ModelIdentifiers implements ModelLoadingPlugin {
     }
 
     @Override
-    public void onInitializeModelLoader(Context ctx) {
+    public void initialize(Context context) {
         var config = EnhancedBlockEntities.CONFIG;
 
         for (var entry : modelLoaders.entrySet()) {
             if (entry.getKey().test(config)) {
-                ctx.addModels(entry.getValue());
+                context.addModels(entry.getValue());
             }
         }
     }

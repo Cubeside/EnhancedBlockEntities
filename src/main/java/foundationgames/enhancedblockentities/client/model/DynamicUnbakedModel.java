@@ -25,12 +25,8 @@ public class DynamicUnbakedModel implements UnbakedModel {
     }
 
     @Override
-    public Collection<Identifier> getModelDependencies() {
-        return Collections.emptyList();
-    }
+    public void resolve(Resolver resolver) {
 
-    @Override
-    public void setParents(Function<Identifier, UnbakedModel> modelLoader) {
     }
 
     @Override

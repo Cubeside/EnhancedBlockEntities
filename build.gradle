@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '1.7-SNAPSHOT'
+	id 'fabric-loom' version '1.8-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -13,6 +13,7 @@ group = project.maven_group
 repositories {
 	maven { url = 'https://maven.terraformersmc.com/' }
 	maven { url = 'https://api.modrinth.com/maven/' }
+	mavenLocal()
 }
 
 dependencies {
@@ -28,7 +29,7 @@ dependencies {
 	modApi "com.terraformersmc:modmenu:${project.modmenu_version}"
 
 	// Sodium for compatibility
-	modCompileOnlyApi "maven.modrinth:sodium:${project.sodium_version}"
+	modCompileOnlyApi "net.caffeinemc:fabric:${project.sodium_version}"
 }
 
 processResources {

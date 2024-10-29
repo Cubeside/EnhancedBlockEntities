@@ -23,7 +23,7 @@ public enum TextureHacks {;
                 NativeImage prod = new NativeImage(src.getFormat(), sw, sh, false);
                 for (int u = 0; u < sw; u++) {
                     for (int v = 0; v < sh; v++) {
-                        prod.setColor(u, v, src.getColor(x + u, y + v));
+                        prod.setColorArgb(u, v, src.getColorArgb(x + u, y + v));
                     }
                 }
                 src.close();
